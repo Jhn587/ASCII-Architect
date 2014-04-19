@@ -1,0 +1,4 @@
+ToDo
+Step one, get all the letters converted into strings
+Figure out how double queue works
+Get Some sleep.
