@@ -1,4 +1,5 @@
-import java.util.Queue;
+import java.util.Deque;
+import java.util.HashMap;
 
 public class Architect {
 //a is +
@@ -12,32 +13,32 @@ public class Architect {
 //i is ++--***..
 //j is ++--***...
 
-	private Map<Character, Deque<Character>> data;
+	private HashMap<Character, Deque<Character>> data;
 	private String toConvert;
 	private String toReturn;
 	
 	public Architect(String toConvert){
 		this.toConvert = toConvert;
 		
-		Queue<Character> forA = new Queue<>();
+		Deque<Character> forA = new Deque<>();
 		forA.add('+');
 		
-		Queue<Character> forB = new Queue<>();
+		Deque<Character> forB = new Deque<>();
 		forB.add('+');
 		forB.add('+');
 		
-		Queue<Character> forC = new Queue<>();
+		Deque<Character> forC = new Deque<>();
 		forC.add('+');
 		forC.add('+');
 		forC.add('-');
 		
-		Queue<Character> forD = new Queue<>();
+		Deque<Character> forD = new Deque<>();
 		forD.add('+');
 		forD.add('+');
 		forD.add('-');
 		forD.add('-');
 		
-		Queue<Character> forE = new Queue<>();
+		Deque<Character> forE = new Deque<>();
 		forE.add('+');
 		forE.add('+');
 		forE.add('-');
@@ -45,7 +46,7 @@ public class Architect {
 		forE.add('*');
 		
 		
-		Queue<Character> forF = new Queue<>();
+		Deque<Character> forF = new Deque<>();
 		forF.add('+');
 		forF.add('+');
 		forF.add('-');
@@ -54,7 +55,7 @@ public class Architect {
 		forF.add('*');
 
 		
-		Queue<Character> forG = new Queue<>();
+		Deque<Character> forG = new Deque<>();
 		forG.add('+');
 		forG.add('+');
 		forG.add('-');
@@ -64,7 +65,7 @@ public class Architect {
 		forG.add('*');
 
 		
-		Queue<Character> forH = new Queue<>();
+		Deque<Character> forH = new Deque<>();
 		forH.add('+');
 		forH.add('+');
 		forH.add('-');
@@ -75,7 +76,7 @@ public class Architect {
 		forH.add('.');
 		
 		
-		Queue<Character> forI = new Queue<>();
+		Deque<Character> forI = new Deque<>();
 		forI.add('+');
 		forI.add('+');
 		forI.add('-');
@@ -87,11 +88,28 @@ public class Architect {
 		forI.add('.');
 		
 		
+		Deque<Character> forJ = new Deque<>();
+		forJ.add('+');
+		forJ.add('+');
+		forJ.add('-');
+		forJ.add('-');
+		forJ.add('*');
+		forJ.add('*');
+		forJ.add('*');
+		forJ.add('.');
+		forJ.add('.');
+		forJ.add('.');
 		
-		
-		
-		
-
+		this.data.put('a', forA);
+		this.data.put('b', forB);
+		this.data.put('c', forC);
+		this.data.put('d', forD);
+		this.data.put('e', forE);
+		this.data.put('f', forF);
+		this.data.put('g', forG);
+		this.data.put('h', forH);
+		this.data.put('i', forI);
+		this.data.put('j', forJ);
 
 
 
