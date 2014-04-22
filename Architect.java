@@ -16,10 +16,11 @@ public class Architect {
 	private HashMap<Character, Deque<Character>> data;
 	private String toConvert;
 	private String toReturn;
+	private ArrayList<Combo> fromString;
 	
 	public Architect(String toConvert){
 		this.toConvert = toConvert;
-		
+		convert(this.toConvert);
 		Deque<Character> forA = new Deque<>();
 		forA.add('+');
 		
@@ -116,5 +117,42 @@ public class Architect {
 //j is ++--***...
 		
 	}
-
+	
+	private void convert(String tc){
+		int i = 0;
+		while(i < tc.length()){
+			if(i+1<tc.length()){
+				if(isNumber(tc.charAt(i+1))){
+					this.fromString.add(new Combo(tc.charAt(i), tc.charAt(i+1)));
+					i+=2;
+				} else{
+					this.fromString.add(new Combo(tc.charAt(i), '0'));
+					i+=1;
+				}
+				
+			}
+		}
+	}
+	
+	private boolean isNumber(char toCheck){
+		switch(toCheck){
+			case '0':
+			case '1':
+			case '2':
+			case '3':
+			case '4':
+			case '5':
+			case '6':
+			case '7':
+			case '8':
+			case '9':
+				return true;
+				break;
+			default:
+				return false;
+				break;
+		
+		
+		}
+	}
 }
