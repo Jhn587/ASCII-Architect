@@ -2,3 +2,13 @@ ToDo
 Step one, get all the letters converted into strings
 Figure out how double queue works
 Get Some sleep.
+
+
+
+
+-----------------------------------
+We want to be able to select a file using some sort of gui thing
+Finish actually making it first though
+We finished Driver class
+
+-----------------------------------
