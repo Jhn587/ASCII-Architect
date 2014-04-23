@@ -1,5 +1,6 @@
 import java.util.Deque;
 import java.util.HashMap;
+import java.util.ArrayDeque;
 
 public class Architect {
 //a is +
@@ -13,7 +14,7 @@ public class Architect {
 //i is ++--***..
 //j is ++--***...
 
-	private HashMap<Character, Deque<Character>> data;
+	private HashMap<Character, ArrayDeque<Character>> data;
 	private String toConvert;
 	private String toReturn;
 	private ArrayList<Combo> fromString;
@@ -21,25 +22,25 @@ public class Architect {
 	public Architect(String toConvert){
 		this.toConvert = toConvert;
 		convert(this.toConvert);
-		Deque<Character> forA = new Deque<>();
+		ArrayDeque<Character> forA = new ArrayDeque<>();
 		forA.add('+');
 		
-		Deque<Character> forB = new Deque<>();
+		ArrayDeque<Character> forB = new ArrayDeque<>();
 		forB.add('+');
 		forB.add('+');
 		
-		Deque<Character> forC = new Deque<>();
+		ArrayDeque<Character> forC = new ArrayDeque<>();
 		forC.add('+');
 		forC.add('+');
 		forC.add('-');
 		
-		Deque<Character> forD = new Deque<>();
+		ArrayDeque<Character> forD = new ArrayDeque<>();
 		forD.add('+');
 		forD.add('+');
 		forD.add('-');
 		forD.add('-');
 		
-		Deque<Character> forE = new Deque<>();
+		ArrayDeque<Character> forE = new ArrayDeque<>();
 		forE.add('+');
 		forE.add('+');
 		forE.add('-');
@@ -47,7 +48,7 @@ public class Architect {
 		forE.add('*');
 		
 		
-		Deque<Character> forF = new Deque<>();
+		ArrayDeque<Character> forF = new ArrayDeque<>();
 		forF.add('+');
 		forF.add('+');
 		forF.add('-');
@@ -56,7 +57,7 @@ public class Architect {
 		forF.add('*');
 
 		
-		Deque<Character> forG = new Deque<>();
+		ArrayDeque<Character> forG = new ArrayDeque<>();
 		forG.add('+');
 		forG.add('+');
 		forG.add('-');
@@ -66,7 +67,7 @@ public class Architect {
 		forG.add('*');
 
 		
-		Deque<Character> forH = new Deque<>();
+		ArrayDeque<Character> forH = new ArrayDeque<>();
 		forH.add('+');
 		forH.add('+');
 		forH.add('-');
@@ -77,7 +78,7 @@ public class Architect {
 		forH.add('.');
 		
 		
-		Deque<Character> forI = new Deque<>();
+		ArrayDeque<Character> forI = new ArrayDeque<>();
 		forI.add('+');
 		forI.add('+');
 		forI.add('-');
@@ -89,7 +90,7 @@ public class Architect {
 		forI.add('.');
 		
 		
-		Deque<Character> forJ = new Deque<>();
+		ArrayDeque<Character> forJ = new ArrayDeque<>();
 		forJ.add('+');
 		forJ.add('+');
 		forJ.add('-');
