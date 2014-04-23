@@ -1,6 +1,7 @@
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.ArrayDeque;
+import java.util.ArrayList;
 
 public class Architect {
 //a is +
@@ -17,7 +18,7 @@ public class Architect {
 	private HashMap<Character, ArrayDeque<Character>> data;
 	private String toConvert;
 	private String toReturn;
-	private ArrayList<Combo> fromString;
+	private ArrayList<Combo> fromString = new ArrayList<Combo>();
 	
 	public Architect(String toConvert){
 		this.toConvert = toConvert;
@@ -102,6 +103,7 @@ public class Architect {
 		forJ.add('.');
 		forJ.add('.');
 		
+		this.data = new HashMap<Character, ArrayDeque<Character>>();
 		this.data.put('a', forA);
 		this.data.put('b', forB);
 		this.data.put('c', forC);
@@ -124,15 +126,20 @@ public class Architect {
 	private void convert(String tc){
 		int i = 0;
 		while(i < tc.length()){
-			if(i+1<tc.length()){
+			if((i+1)<tc.length()){
 				if(isNumber(tc.charAt(i+1))){
 					this.fromString.add(new Combo(tc.charAt(i), tc.charAt(i+1)));
+					//System.out.println(i);
 					i+=2;
 				} else{
 					this.fromString.add(new Combo(tc.charAt(i), '0'));
+					//System.out.println(i);
 					i+=1;
 				}
 				
+			} else {
+				this.fromString.add(new Combo(tc.charAt(i), '0'));
+				i+=1;
 			}
 		}
 	}
@@ -150,10 +157,10 @@ public class Architect {
 			case '8':
 			case '9':
 				return true;
-				break;
+				
 			default:
 				return false;
-				break;
+				
 		
 		
 		}
