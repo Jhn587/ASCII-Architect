@@ -7,5 +7,8 @@ public class Combo{
 		this.padding = Integer.parseInt(("" + padding));
 	}
 
-
+	public String toString(){
+		return ""+this.letter+this.padding;
+	
+	}
 }

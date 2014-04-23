@@ -112,7 +112,9 @@ public class Architect {
 		this.data.put('i', forI);
 		this.data.put('j', forJ);
 
-
+		for(Combo toTest:this.fromString){
+			System.out.println(toTest);
+		}
 
 //j is ++--***...
 		
