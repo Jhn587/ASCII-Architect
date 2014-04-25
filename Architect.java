@@ -128,17 +128,17 @@ public class Architect {
 		while(i < tc.length()){
 			if((i+1)<tc.length()){
 				if(isNumber(tc.charAt(i+1))){
-					this.fromString.add(new Combo(tc.charAt(i), tc.charAt(i+1)));
+					this.fromString.add(new Combo(tc.charAt(i), tc.charAt(i+1), this.data.get(tc.charAt(i)));
 					//System.out.println(i);
 					i+=2;
 				} else{
-					this.fromString.add(new Combo(tc.charAt(i), '0'));
+					this.fromString.add(new Combo(tc.charAt(i), '0', this.data.get(tc.charAt(i))));
 					//System.out.println(i);
 					i+=1;
 				}
 				
 			} else {
-				this.fromString.add(new Combo(tc.charAt(i), '0'));
+				this.fromString.add(new Combo(tc.charAt(i), '0', this.data.get(tc.charAt(i))));
 				i+=1;
 			}
 		}

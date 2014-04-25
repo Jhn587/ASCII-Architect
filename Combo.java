@@ -16,7 +16,15 @@ public class Combo{
 	}
 	
 	private void addPaddingToArray(){
+		for(int i = 0; i < padding; i++){
+			toPrint.addFront(' ');
 		
+		}
+	
+	}
+	
+	public int getLength(){
+		return toPrint.size();
 	
 	}
 }
