@@ -1,12 +1,17 @@
+import java.util.ArrayDeque;
+
 public class Combo{
 	private char letter;
 	private int padding;
-	private ArrayDeque<Character> toPrint;
+	private ArrayDeque<Character> toPrint = new ArrayDeque<Character>();
 	
 	public Combo(char letter, char padding, ArrayDeque<Character> toCopy){
+		System.out.println(toCopy);
 		this.letter = letter;
 		this.padding = Integer.parseInt(("" + padding));
-		this.toPrint = new ArrayDeque<Character>(toCopy);
+		if(toCopy!=null){
+			this.toPrint = new ArrayDeque<Character>(toCopy);
+		}
 		addPaddingToArray();
 	}
 
@@ -17,7 +22,8 @@ public class Combo{
 	
 	private void addPaddingToArray(){
 		for(int i = 0; i < padding; i++){
-			toPrint.addFront(' ');
+			Character toAdd = new Character(' ');
+			this.toPrint.addFirst(toAdd);
 		
 		}
 	

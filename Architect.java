@@ -15,14 +15,25 @@ public class Architect {
 //i is ++--***..
 //j is ++--***...
 
-	private HashMap<Character, ArrayDeque<Character>> data;
+	private HashMap<Character, ArrayDeque<Character>> data = new HashMap<Character, ArrayDeque<Character>>();
 	private String toConvert;
 	private String toReturn;
 	private ArrayList<Combo> fromString = new ArrayList<Combo>();
 	
 	public Architect(String toConvert){
+		populateMap();
 		this.toConvert = toConvert;
 		convert(this.toConvert);
+
+		for(Combo toTest:this.fromString){
+			System.out.println(toTest);
+		}
+
+//j is ++--***...
+		
+	}
+	
+	private void populateMap(){
 		ArrayDeque<Character> forA = new ArrayDeque<>();
 		forA.add('+');
 		
@@ -103,7 +114,7 @@ public class Architect {
 		forJ.add('.');
 		forJ.add('.');
 		
-		this.data = new HashMap<Character, ArrayDeque<Character>>();
+		
 		this.data.put('a', forA);
 		this.data.put('b', forB);
 		this.data.put('c', forC);
@@ -115,12 +126,6 @@ public class Architect {
 		this.data.put('i', forI);
 		this.data.put('j', forJ);
 
-		for(Combo toTest:this.fromString){
-			System.out.println(toTest);
-		}
-
-//j is ++--***...
-		
 	}
 	
 	private void convert(String tc){
@@ -128,7 +133,7 @@ public class Architect {
 		while(i < tc.length()){
 			if((i+1)<tc.length()){
 				if(isNumber(tc.charAt(i+1))){
-					this.fromString.add(new Combo(tc.charAt(i), tc.charAt(i+1), this.data.get(tc.charAt(i)));
+					this.fromString.add(new Combo(tc.charAt(i), tc.charAt(i+1), this.data.get(tc.charAt(i))));
 					//System.out.println(i);
 					i+=2;
 				} else{
