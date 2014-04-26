@@ -33,4 +33,19 @@ public class Combo{
 		return toPrint.size();
 	
 	}
+	
+	public void toMakeSize(int lengthToBe){
+		int toChange = lengthToBe-this.getLength();
+		addSpacesToEnd(toChange);
+	}
+	
+	public void addSpacesToEnd(int numberOfSpaces){
+		for(int i = 0; i < numberOfSpaces; i++){
+			toPrint.addLast(' ');
+		}
+	}
+	
+	public Character pop(){
+		return this.toPrint.removeLast();
+	}
 }

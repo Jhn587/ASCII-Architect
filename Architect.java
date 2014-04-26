@@ -24,11 +24,12 @@ public class Architect {
 		populateMap();
 		this.toConvert = toConvert;
 		convert(this.toConvert);
-
+		int maxLength = findMaxLength();
+		adjustLength(maxLength);
 		for(Combo toTest:this.fromString){
 			System.out.println(toTest);
 		}
-
+		this.toReturn = makeString(maxLength);
 //j is ++--***...
 		
 	}
@@ -169,5 +170,38 @@ public class Architect {
 		
 		
 		}
+	}
+	
+	private int findMaxLength(){
+		int max = 0;
+		for(Combo toCheck: fromString){
+			if(toCheck.getLength()>max){
+				max = toCheck.getLength();
+			}
+		}
+		
+		return max;
+	}
+	
+	private void adjustLength(int maxSize){
+		for(Combo toCheck: fromString){
+			toCheck.toMakeSize(maxSize);
+		}
+	
+	}
+	
+	private String makeString(int max){
+		String toReturn = "";
+		for(int i = 0; i < max; i++){
+			for(Combo toPop: fromString){
+				toReturn += toPop.pop();
+			}
+			toReturn += "\n";
+		}
+		return toReturn;
+	}
+	
+	public String toString(){
+		return this.toReturn;
 	}
 }
