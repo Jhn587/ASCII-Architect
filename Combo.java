@@ -6,7 +6,7 @@ public class Combo{
 	private ArrayDeque<Character> toPrint = new ArrayDeque<Character>();
 	
 	public Combo(char letter, char padding, ArrayDeque<Character> toCopy){
-		System.out.println(toCopy);
+		//System.out.println(toCopy);
 		this.letter = letter;
 		this.padding = Integer.parseInt(("" + padding));
 		if(toCopy!=null){

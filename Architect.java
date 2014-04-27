@@ -26,9 +26,9 @@ public class Architect {
 		convert(this.toConvert);
 		int maxLength = findMaxLength();
 		adjustLength(maxLength);
-		for(Combo toTest:this.fromString){
-			System.out.println(toTest);
-		}
+		//for(Combo toTest:this.fromString){
+		//	System.out.println(toTest);
+		//}
 		this.toReturn = makeString(maxLength);
 //j is ++--***...
 		

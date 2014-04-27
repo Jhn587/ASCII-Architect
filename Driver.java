@@ -17,12 +17,12 @@ public class Driver {
 		actualString += "-       --        ---        --       -\n";
 		actualString += "+       ++        +++        ++       +\n";
 		actualString += "+       ++        +++        ++       +\n";
-		if(toRun.toString().equals(actualString)){
+		/*if(toRun.toString().equals(actualString)){
 		
 			System.out.println("It looks like it Works");
 		} else{
 			System.out.println("There is a problem");
-		}
+		}*/
 	}
 
 }
