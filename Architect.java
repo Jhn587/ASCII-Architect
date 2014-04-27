@@ -133,8 +133,8 @@ public class Architect {
 		int i = 0;
 		while(i < tc.length()){
 			if((i+1)<tc.length()){
-				if(isNumber(tc.charAt(i+1))){
-					this.fromString.add(new Combo(tc.charAt(i), tc.charAt(i+1), this.data.get(tc.charAt(i))));
+				if(isNumber(tc.charAt(i))){
+					this.fromString.add(new Combo(tc.charAt(i+1), tc.charAt(i), this.data.get(tc.charAt(i+1))));
 					//System.out.println(i);
 					i+=2;
 				} else{
